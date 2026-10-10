@@ -3,6 +3,28 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, Calendar, Clock, Sparkles, MapPin, Camera, Utensils, Video } from 'lucide-react';
 
+{/* Navigation / Header Bar ด้านบนสุด */}
+<header className="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-rose-100 shadow-sm px-6 py-3 flex items-center justify-between">
+  {/* ฝั่งซ้าย: Logo + ชื่อเว็บ */}
+  <div className="flex items-center gap-3">
+    {/* รูป Logo ของคุณ (วางไว้ใน public/images/1.jpg หรือ logo.png) */}
+    <img 
+      src="/images/1.jpg" 
+      alt="Logo" 
+      className="w-10 h-10 rounded-full object-cover border-2 border-rose-300 shadow-sm"
+    />
+    <span className="font-bold text-rose-600 text-lg tracking-wide">
+      J & M Anniversary ❤️
+    </span>
+  </div>
+
+  {/* ฝั่งขวา: ข้อความหรือปุ่มกดน่ารักๆ */}
+  <div className="flex items-center gap-2 text-xs md:text-sm bg-rose-50 text-rose-600 px-3 py-1.5 rounded-full border border-rose-200">
+    <Sparkles className="w-4 h-4 text-rose-500" />
+    <span>1st Year Anniversary</span>
+  </div>
+</header>
+
 // ข้อมูลรูปภาพและความทรงจำทั้ง 13 ช่วงเวลา (ดึงรูปตามลำดับ 1.jpg ถึง 13.jpg)
 const memories = [
   {
